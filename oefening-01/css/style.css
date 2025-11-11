@@ -1,0 +1,38 @@
+body{
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+nav a{
+    color: gray;
+    text-transform: uppercase;
+    
+}nav ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+nav li{
+    margin-right: 10px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+}
+article{
+    flex-basis: 300px;
+}
+a{
+    color: blue;
+    text-decoration: underline;
+}

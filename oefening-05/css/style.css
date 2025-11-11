@@ -5,8 +5,9 @@ body {
   box-sizing: border-box;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
-  width: 100vw;
+   /* height: 100vh; */ /*ook nutteloos want de content is sowieso langer/groter dan 100vh ?.. */
+  /* width: 100vw; GEBRUIK % die houdt wel rekening met de scroll bar die 16px van de VW in beslag neemt*/ 
+  /*DEZE 2 LIJNEN ZORGEN DAT DE PAGINA HORIZONTAAL SCROLLT, want body heeft standaard 16px margin, dus 100vw + 16px = horizontale*/
 }
 
 body {
@@ -67,11 +68,12 @@ header img {
 
 /*--- navigatie ---*/
 nav {
+  display: flex;
+  justify-content: center;
   grid-area: nav;
-  display: inline-block;
   padding: 2rem 0;
   border-bottom: 1px solid #7d7d7d;
-  margin: 0 2rem 1rem 2rem;
+  margin: 0 0 1rem 0rem;
 }
 
 nav > ul {
@@ -79,6 +81,14 @@ nav > ul {
   margin: 0px;
   text-align: center;
   vertical-align: top;
+}
+input#zoek{
+  text-align: left;
+  all: revert;
+  padding: 4px 5px;
+}
+input::placeholder{
+  color: #7d7d7d;
 }
 nav > ul > li {
   list-style: none;
@@ -122,6 +132,7 @@ main {
 
 .intro img {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
 main img {
@@ -146,6 +157,21 @@ a {
   color: #232226;
 }
 
+.portfolio{
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 6rem;
+}
+figure{
+  flex: 0 1 28%; 
+}
+figure img{
+  width: 432px;
+}
+
 blockquote {
   width: 100%;
   padding: 2rem;
@@ -160,7 +186,7 @@ blockquote {
 /*--- aside ---*/
 aside {
   grid-area: aside;
-  padding: 2rem 1rem;
+  padding: 2rem 0 2rem 1rem;
 }
 
 aside img a {
